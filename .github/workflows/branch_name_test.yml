@@ -23,4 +23,4 @@ jobs:
         uses: goshencollege/validate-branch-name@v1.0.1
         with:
         # Regex pattern that the branch name should match
-          pattern: ^((devOps|task|feature|fixed|hot-fix|DevOps|Task|Feature|Fixed|Hot-fix)(\/jokeapp-)([a-zA-Z0-9])+)|(Merge branch)|main|release|develop|refs
+          pattern: ^((devOps|task|feature|fixed|hot-fix|DevOps|Task|Feature|Fixed|Hot-fix)(\/petclinic-)([a-zA-Z0-9])+)|(Merge branch)|main|release|develop|refs
