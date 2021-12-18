@@ -1,7 +1,5 @@
 package systems.hexon.petclinic.services;
 
-import systems.hexon.petclinic.models.Pet;
-
 import java.util.Set;
 
 /**********************************************************************************************************************\
@@ -16,11 +14,14 @@ import java.util.Set;
 *                              and/or distributed without the express permission of Duy Kh. Van Ba                     *
 \**********************************************************************************************************************/
 
-public interface PetService extends CrudService<Pet, Long> {
+public interface CrudService<T, ID> {
+    Set<T> findAll();
 
-    Pet findById(Long id);
+    T findById(ID id);
 
-    Pet save(Pet pet);
+    T save(T object);
 
-    Set<Pet> findAll();
+    void delete(T object);
+
+    void deleteById(ID id);
 }
