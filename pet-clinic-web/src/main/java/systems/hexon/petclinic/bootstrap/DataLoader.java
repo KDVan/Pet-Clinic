@@ -1,13 +1,12 @@
 package systems.hexon.petclinic.bootstrap;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import systems.hexon.petclinic.models.Owner;
 import systems.hexon.petclinic.models.Vet;
 import systems.hexon.petclinic.services.OwnerService;
 import systems.hexon.petclinic.services.VetService;
-import systems.hexon.petclinic.services.map.OwnerMappedService;
-import systems.hexon.petclinic.services.map.VetMappedService;
 
 /**********************************************************************************************************************\
 *                                   Copyright (C) 2021 Duy Kh. Van Ba duyvbkh134@gmail.com                             *
@@ -26,9 +25,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        this.ownerService = new OwnerMappedService();
-        this.vetService = new VetMappedService();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

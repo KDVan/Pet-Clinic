@@ -1,5 +1,6 @@
 package systems.hexon.petclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import systems.hexon.petclinic.models.Vet;
 import systems.hexon.petclinic.services.VetService;
 
@@ -17,6 +18,7 @@ import java.util.Set;
 *                              and/or distributed without the express permission of Duy Kh. Van Ba                     *
 \**********************************************************************************************************************/
 
+@Service
 public class VetMappedService extends AbstractMappedService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
