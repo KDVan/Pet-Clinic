@@ -1,7 +1,7 @@
 package systems.hexon.petclinic.services.map;
 
 import systems.hexon.petclinic.models.Vet;
-import systems.hexon.petclinic.services.CrudService;
+import systems.hexon.petclinic.services.VetService;
 
 import java.util.Set;
 
@@ -17,7 +17,7 @@ import java.util.Set;
 *                              and/or distributed without the express permission of Duy Kh. Van Ba                     *
 \**********************************************************************************************************************/
 
-public class VetMappedService extends AbstractMappedService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetMappedService extends AbstractMappedService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();

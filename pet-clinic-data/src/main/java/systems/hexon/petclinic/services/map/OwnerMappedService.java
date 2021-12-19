@@ -1,7 +1,7 @@
 package systems.hexon.petclinic.services.map;
 
 import systems.hexon.petclinic.models.Owner;
-import systems.hexon.petclinic.services.CrudService;
+import systems.hexon.petclinic.services.OwnerService;
 
 import java.util.Set;
 
@@ -17,7 +17,7 @@ import java.util.Set;
 *                              and/or distributed without the express permission of Duy Kh. Van Ba                     *
 \**********************************************************************************************************************/
 
-public class OwnerMappedService extends AbstractMappedService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerMappedService extends AbstractMappedService<Owner, Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
@@ -36,6 +36,11 @@ public class OwnerMappedService extends AbstractMappedService<Owner, Long> imple
     @Override
     public Owner save(Owner object) {
         return super.save(object.getId(), object);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
     }
 
     @Override
