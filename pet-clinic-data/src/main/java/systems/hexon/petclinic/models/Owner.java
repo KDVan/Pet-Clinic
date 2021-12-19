@@ -12,5 +12,5 @@ package systems.hexon.petclinic.models;
 *                              and/or distributed without the express permission of Duy Kh. Van Ba                     *
 \**********************************************************************************************************************/
 
-public class Owner {
+public class Owner extends Person {
 }
