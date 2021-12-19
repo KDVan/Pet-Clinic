@@ -9,6 +9,6 @@ jobs:
       - name: Check Commit Type
         uses: gsactions/commit-message-checker@v1
         with:
-          pattern: '^(Task:|task:|Feature:|feature:|Fixed:|fixed:|Hot-fix:|hot-fix:|Merge)(\s([a-zA-Z0-9][^\n\/]+)+)'
+          pattern: '^(Task:|task:|Feature:|feature:|Fixed:|fixed:|Hot-fix:|hot-fix:|Merge|Create|Update)(\s([a-zA-Z0-9][^\n\/]+)+)'
           flags: 'gm'
           error: 'Your first line has to contain a commit type like "Task:".'
