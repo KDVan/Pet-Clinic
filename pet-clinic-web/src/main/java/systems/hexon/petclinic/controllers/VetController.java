@@ -1,7 +1,9 @@
 package systems.hexon.petclinic.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import systems.hexon.petclinic.services.VetService;
 
 /**********************************************************************************************************************\
 *                                   Copyright (C) 2021 Duy Kh. Van Ba duyvbkh134@gmail.com                             *
@@ -18,9 +20,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/vets")
 public class VetController {
+    private final VetService vetService;
+
+    public VetController(VetService vetService) {
+        this.vetService = vetService;
+    }
 
     @RequestMapping({"", "/", "/index", "/index.html"})
-    public String listVets() {
+    public String listVets(Model model) {
+        model.addAttribute("vets", vetService.findAll());
         return "vets/index";
     }
 }
